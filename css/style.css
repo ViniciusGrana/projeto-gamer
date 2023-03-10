@@ -11,13 +11,56 @@ padding: 0;
 box-sizing: border-box
 
 }
+body {
+background-color: #1b1426;
+color: #ffffff;
+}
+/* layout grid */
+.layout-grid {
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.alinhamento-between-center {
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
 
 
 /* Mobile first */
 
 
-header .header-top .phone {
+/* header */
+header {
+    background-color: #1b1426;
+    height: 60px;
+}
+/* header top */
+
+header .header-top {
+    display: none;
+}
+/* header bottom */
 
 
+header .header-bottom img.logo {
+    width: 86px;
 }
 
+header .header-bottom nav {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: 80vw;
+    height: calc(100vh - 60px);
+    display: flex;
+    flex-direction: column;
+    background-color: grey;
+    border: 1px solid white;
+}
+
+header .header-bottom .menu-usuarios {
+    display: none;
+}
