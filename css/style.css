@@ -55,8 +55,10 @@ header {
 }
 
 /* Header Top */
+
 header .header-top {
-    display: none;
+
+    /* display: none; */
 }
 
 /* Header Bottom */
@@ -152,9 +154,9 @@ main {
     margin-top: 60px;
 }
 .banner {
-    width: 100%;
-    height: 606px;
-    padding: 40px 0;
+    height: 722px;
+    background-size: cover;
+    background-position: top;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -234,7 +236,7 @@ color: #1B1426;
 
 /* desktops */
 @media screen and (min-width: 1200px) {
-    .layout-grid{
+    .layout-grid {
         width: 100%;
         max-width: 1200px;
 
@@ -244,7 +246,46 @@ color: #1B1426;
     /* HEADER */
     header {
         position: static;
+        height: 140px;
     }
+
+    header .header-top {
+        display: block;   
+        height: 50px;
+        border-bottom: 2px solid #F9AA01;
+    }
+
+    header .header-top .contatos {
+        width: 415px;
+        display: flex;
+        justify-content: space-between;
+
+        font-family: Inter;
+        font-size: 14px;
+        font-weight: 400;
+
+        border: 2px solid white;
+    }
+
+    header .header-top .midias-sociais {
+        width: 120px;
+        
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border: 2px solid white;
+    
+    }
+    
+    header .header-top .contatos > div {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+        border: 1px solid yellow;
+    }
+
+
     header .menu-hamburger,
     header .menu-pontinhos,
     header .header-bottom nav .phone,
@@ -252,20 +293,32 @@ color: #1B1426;
     header .header-bottom nav .midias-sociais {
         display: none;
     }
-    header .header-bottom img.logo {
+
+
+    header .header-bottom {
+        width: 90px;
+    }
+    header .header-bottom img.logo{
         width: 200px;
     }
     header .header-bottom nav {
         position: static;
         width: 440px;
         height: 50px;
+        padding: 0;
         flex-direction: row;
-        background-color: red;
+        align-items: center;
+        /* background-color: red; */
+    }
+    header .header-bottom nav > a{
+        border: none;
+        font-size: 14px;
     }
     header .header-bottom .menu-usuarios {
         position: static;
         flex-direction: row;
-        width: 180px;
+        justify-content: space-between;
+        width: 120px;
         height: 50px;
         background-color: transparent;
     }
