@@ -1,19 +1,26 @@
 /* imports das fontes */
 
-/* TITILLIUM WEB black */
+/* TITILLIUM WEB */
 @font-face {
     font-family: TitilliumWeb-Black;
     src: url(../assets/fonts/Titillium_Web/TitilliumWeb-Black.ttf);
 }
-/* titilliumWeb BOLD */
+
 @font-face {
-    font-family: TitilliumWeb-bold;
+    font-family: TitilliumWeb-Bold;
     src: url(../assets/fonts/Titillium_Web/TitilliumWeb-Bold.ttf);
 }
+
 /* INTER */
 @font-face {
     font-family: Inter;
     src: url(../assets/fonts/Inter/Inter-VariableFont_slnt\,wght.ttf);
+}
+
+/* quicksand */
+@font-face {
+    font-family: Quicksand;
+    src: url(../assets/fonts/Quicksand/Quicksand-VariableFont_wght.ttf);
 }
 
 * {
@@ -27,8 +34,12 @@ body {
 }
 
 /* Classes genéricas */
-.layout-grid {
+.mostrar-menu {
+    left: 0 !important;
+}
 
+
+.layout-grid {
     width: 90%;
     height: 100%;
     margin: 0 auto;
@@ -55,10 +66,8 @@ header {
 }
 
 /* Header Top */
-
 header .header-top {
-
-    /* display: none; */
+    display: none;
 }
 
 /* Header Bottom */
@@ -78,22 +87,17 @@ header .header-bottom nav {
     left: -80vw;
     width: 80vw;
     height: calc(100vh - 60px);
-    
+
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding-bottom: 20px;
     background-image: linear-gradient(to right bottom, rgba(27, 20, 38, 0.7), rgba(27, 20, 38, 0.4));
     backdrop-filter: blur(45px);
-    transition: left 0.4s;
-}
-
-.mostrar-menu {
-    left: 0 !important;
+    transition: 0.8s;
 }
 
 /* somente links "filhos diretos" */
-header .header-bottom nav > a {
+header .header-bottom nav>a {
     padding: 30px 0;
     color: white;
     font-family: Inter;
@@ -102,9 +106,16 @@ header .header-bottom nav > a {
     text-align: center;
     text-decoration: none;
     border-bottom: 2px solid #F9AA01;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-header .header-bottom nav > a:last-of-type {
+header .header-bottom nav>a:hover {
+    border-bottom: #F9AA01;
+}
+
+header .header-bottom nav>a:last-of-type {
     border-bottom: none;
 }
 
@@ -129,128 +140,193 @@ header .header-bottom nav .midias-sociais {
     gap: 50px;
 }
 
-/* menu lateral direito - ícones */
 header .header-bottom .menu-usuarios {
     position: fixed;
     top: 60px;
-    right: -80px;
+    right: -20vw;
+    height: 180px;
+    width: 20vw;
     background-image: linear-gradient(to right bottom, rgba(27, 20, 38, 0.7), rgba(27, 20, 38, 0.4));
-    backdrop-filter: blur(45px);
-    height: 170px;
-    width: 75px;
-    
+    transition: 0.6s;
+
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    transition: right 0.4s;
+
 }
 
-
-.mostrar-usuarios {
+.mostrar-usuario {
     right: 0 !important;
 }
+
+/* MAIN */
 main {
     margin-top: 60px;
 }
+
+/* Banner */
 .banner {
-    height: 722px;
-    background-size: cover;
-    background-position: top;
+    width: 100%;
+    height: 606px;
+    padding: 10px 0;
+    background-image: url(../assets/images/valorant-pergunte-3-scaled\ 1.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
 
-    background-color: rebeccapurple;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: bottom;
-    background-image: url(../assets/images/valorant-pergunte-3-scaled\ 1.png);
 }
 
-.banner h1{
+main .banner h1 {
     font-family: TitilliumWeb-Black;
-    font-size: 40px;
+    font-size: 48px;
+    text-shadow: 0 0 7px #FD4255;
+
 }
 
-.banner .botao-sobre {
-    width: 171px;
+main .botao-sobre {
+    background-color: #F9AA01;
     height: 40px;
+    width: 171px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #F9AA01;
     color: #1B1426;
     text-decoration: none;
-    font-family: TitilliumWeb-bold;
     font-size: 24px;
+    font-family: TitilliumWeb-Bold;
+    margin-bottom: 60px;
     border-radius: 8px;
 }
-/* jogos */
 
-.jogos {
-background-color: #1B1426;
-width: 100%;
-height: 606px;
-display: flex;
-justify-content: space-around;
-align-items: center;
-flex-direction: column;
+main .jogos {
+    background-color: #1B1426;
+    width: 100%;
+    height: 606px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+}
 
+main .info {
+    width: 100%;
+    height: 1600px;
+    background-color: #F9AA01;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
 }
-.time {
-background-color: #F9AA01;
-width: 100%;
-height: 1535px;
-display: flex;
-justify-content: space-around;
-align-items: center;
-flex-direction: column;
-font-size: 18px;
-font-family: TitilliumWeb-black;
-color: #1B1426;
+
+main .titulo h2 {
+    color: #1B1426;
+    font-family: TitilliumWeb-Black;
+    font-size: 18px;
 }
-.entre {
-display: flex;
-justify-content: space-around;
-align-items: center;
-flex-direction: column;
-font-size: 18px;
-font-family: TitilliumWeb-black;
-color: #1B1426;
-}
+
 #linha {
-    width: 204px;
+    width: 200px;
     height: 2px;
     background-color: #1B1426;
-    margin-top: -160px;
 }
 
-/* tablets */
-@media screen and (min-width: 768px){
-
-
+main .titulo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
 }
 
+#linha2 {
+    width: 200px;
+    height: 2px;
+    background-color: #F9AA01;
+}
 
-/* desktops */
+main .titulo-noticia {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+main .noticias {
+    width: 100%;
+    height: 4300px;
+    background-image: url(../assets/images/backgrund_notícias.png);
+}
+
+main .noticias h3 {
+    font-family: TitilliumWeb-Black;
+    font-size: 18px;
+    margin-top: 50px;
+}
+.time {
+    display: flex;
+    
+    background-color:#F9AA01
+    
+}
+ /* Footer */
+footer {
+    padding-top: 60px;
+    padding-bottom: 30px;
+    box-shadow: inset 0 30px 60px black;
+    background-image: url(../assets/images/backgroung_footer.png);
+    background-position: top;
+    background-size: contain;
+}
+
+footer #sobre {
+    width: 100%;
+    height: 304px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+}
+footer #sobre > img {width: 110px; }
+
+footer #sobre p {
+    font-family: Quicksand;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+footer #midias-sociais-footer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+/* Tablets >= 768px*/
+@media screen and (min-width: 768px) {}
+
+/* Desktops >= 1200px*/
 @media screen and (min-width: 1200px) {
     .layout-grid {
         width: 100%;
         max-width: 1200px;
-
-        border: 3px dotted yellowgreen;
+        /* border: 3px dotted yellowgreen; */
     }
 
-    /* HEADER */
+    /* HEADER  */
     header {
         position: static;
         height: 140px;
     }
 
+    /* Header Top */
     header .header-top {
-        display: block;   
+        /* block é o valor default da maioria dos elementos */
+        display: block;
         height: 50px;
         border-bottom: 2px solid #F9AA01;
     }
@@ -264,28 +340,26 @@ color: #1B1426;
         font-size: 14px;
         font-weight: 400;
 
-        border: 2px solid white;
+        /* border: 2px solid white; */
     }
 
-    header .header-top .midias-sociais {
-        width: 120px;
-        
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        border: 2px solid white;
-    
-    }
-    
     header .header-top .contatos > div {
         display: flex;
         justify-content: space-between;
         align-items: center;
         gap: 10px;
-        border: 1px solid yellow;
+        /* border: 1px solid yellow; */
     }
 
+    header .header-top .midias-sociais {
+        width: 120px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        /* border: 2px solid white; */
+    }
 
+    /* Esconde elementos desnecessários */
     header .menu-hamburger,
     header .menu-pontinhos,
     header .header-bottom nav .phone,
@@ -294,13 +368,15 @@ color: #1B1426;
         display: none;
     }
 
-
+    /* Header Bottom */
     header .header-bottom {
-        width: 90px;
+        height: 90px;
     }
-    header .header-bottom img.logo{
+
+    header .header-bottom img.logo {
         width: 200px;
     }
+
     header .header-bottom nav {
         position: static;
         width: 440px;
@@ -310,22 +386,52 @@ color: #1B1426;
         align-items: center;
         /* background-color: red; */
     }
-    header .header-bottom nav > a{
+
+    header .header-bottom nav>a {
         border: none;
         font-size: 14px;
     }
+
+    header .header-bottom nav>a:hover {
+        background-color: transparent;
+        color: #F9AA01;
+    }
+
     header .header-bottom .menu-usuarios {
         position: static;
         flex-direction: row;
         justify-content: space-between;
         width: 120px;
-        height: 50px;
+        height: auto;
         background-color: transparent;
     }
-    
-    /* main */
+
+    /* MAIN */
     main {
         margin-top: 0;
     }
-}
 
+    /* Banner */
+    main .banner {
+        height: 722px;
+        /* alterar a imagem de fundo */
+        background-image: url(../assets/images/Banner_background_1.png);
+        background-size: cover;
+        background-position: top;
+
+    }
+    
+    main .banner h1 {
+        font-size: 80px;
+    }
+
+    /* Sessão de Jogos */
+    main .jogos {
+        height: 500px;
+    }
+    main .jogos .jogos-flex {
+        flex-direction: row;
+    }
+
+
+   
