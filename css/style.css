@@ -11,16 +11,17 @@
     src: url(../assets/fonts/Titillium_Web/TitilliumWeb-Bold.ttf);
 }
 
+
 /* INTER */
 @font-face {
     font-family: Inter;
     src: url(../assets/fonts/Inter/Inter-VariableFont_slnt\,wght.ttf);
 }
 
-/* quicksand */
+/* QUICKSAND */
 @font-face {
     font-family: Quicksand;
-    src: url(../assets/fonts/Quicksand/Quicksand-VariableFont_wght.ttf);
+    src: url(../assets/fonts/Quicksand/static/Quicksand-Regular.ttf);
 }
 
 * {
@@ -34,12 +35,17 @@ body {
 }
 
 /* Classes genéricas */
+
 .mostrar-menu {
     left: 0 !important;
 }
 
+.mostrar-usuario {
+    right: 20px !important;
+}
 
 .layout-grid {
+    /* border: 1px solid salmon; */
     width: 90%;
     height: 100%;
     margin: 0 auto;
@@ -79,6 +85,7 @@ header .header-bottom {
 
 header .header-bottom img.logo {
     width: 86px;
+    /* transform: rotate(-5deg); */
 }
 
 header .header-bottom nav {
@@ -91,9 +98,15 @@ header .header-bottom nav {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    padding-bottom: 20px;
     background-image: linear-gradient(to right bottom, rgba(27, 20, 38, 0.7), rgba(27, 20, 38, 0.4));
     backdrop-filter: blur(45px);
-    transition: 0.8s;
+
+    transition: left 0.8s;
+}
+
+.mostrar-menu {
+    left: 0 !important;
 }
 
 /* somente links "filhos diretos" */
@@ -106,58 +119,40 @@ header .header-bottom nav>a {
     text-align: center;
     text-decoration: none;
     border-bottom: 2px solid #F9AA01;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
-header .header-bottom nav>a:hover {
-    border-bottom: #F9AA01;
+header .header-bottom nav>a {
+    /* background-color: #F9AA01; */
 }
 
 header .header-bottom nav>a:last-of-type {
     border-bottom: none;
 }
 
-/* ícone de mídias sociais possibilidade position 
-header .header-bottom nav .midias-sociais {
-    position: absolute;
-    bottom: 20px;
-    left: calc(50% - 100px);
-    border: 1px solid red;
-    width: 200px;
-    height: 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-*/
+
 
 header .header-bottom nav .midias-sociais {
+    /* */
     display: flex;
     justify-content: center;
-    /* gap é o espaçamento entre os elementos, funciona em linha e também em coluna. */
     gap: 50px;
+    /* gap é o espaçamento entre os elementos, funciona em linha e também em coluna. */
 }
 
-header .header-bottom .menu-usuarios {
+header .menu-usuarios {
     position: fixed;
     top: 60px;
     right: -20vw;
-    height: 180px;
     width: 20vw;
-    background-image: linear-gradient(to right bottom, rgba(27, 20, 38, 0.7), rgba(27, 20, 38, 0.4));
-    transition: 0.6s;
-
+    height: 180px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    background-image: linear-gradient(to right bottom, rgba(27, 20, 38, 0.7), rgba(27, 20, 38, 0.4));
+    backdrop-filter: blur(45px);
 
-}
-
-.mostrar-usuario {
-    right: 0 !important;
+    transition: 0.8s;
 }
 
 /* MAIN */
@@ -165,273 +160,370 @@ main {
     margin-top: 60px;
 }
 
-/* Banner */
+
+/* BANNER */
 .banner {
     width: 100%;
     height: 606px;
-    padding: 10px 0;
-    background-image: url(../assets/images/valorant-pergunte-3-scaled\ 1.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: bottom;
+    padding: 40px 0;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    background-color: rebeccapurple;
+    background-image: url(../assets/images/valorant-pergunte-3-scaled\ 1.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom;
 
 }
 
-main .banner h1 {
+.banner h1 {
     font-family: TitilliumWeb-Black;
-    font-size: 48px;
+    font-size: 40px;
     text-shadow: 0 0 7px #FD4255;
-
 }
 
-main .botao-sobre {
-    background-color: #F9AA01;
-    height: 40px;
+.banner .botao-sobre {
     width: 171px;
+    height: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #F9AA01;
     color: #1B1426;
     text-decoration: none;
-    font-size: 24px;
     font-family: TitilliumWeb-Bold;
-    margin-bottom: 60px;
-    border-radius: 8px;
+    font-size: 24px;
 }
 
-main .jogos {
-    background-color: #1B1426;
+.sessao-sobre {
     width: 100%;
     height: 606px;
+    background-color: #1B1426;
     display: flex;
-    justify-content: space-around;
     flex-direction: column;
+    justify-content: space-evenly;
     align-items: center;
 }
 
-main .info {
+.sessao-info {
     width: 100%;
-    height: 1600px;
+    height: 1400px;
     background-color: #F9AA01;
     display: flex;
-    justify-content: space-around;
     flex-direction: column;
+    /* justify-content: space-evenly; */
     align-items: center;
+    position: relative;
 }
 
-main .titulo h2 {
-    color: #1B1426;
-    font-family: TitilliumWeb-Black;
-    font-size: 18px;
+.sessao-info .ajuste {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
 }
 
 #linha {
     width: 200px;
-    height: 2px;
+    height: 3px;
     background-color: #1B1426;
+    margin-top: 40px;
+
 }
 
-main .titulo {
+#titulo {
+    color: #1B1426;
+    font-family: TitilliumWeb-Black;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+#personagem1 {
+    width: 80vw;
+    height: 450px;
+    margin-top: 120px;
+}
+
+#personagem2 {
+    width: 80vw;
+    height: 450px;
+    margin-top: 100px;
+}
+
+.sessao-info #box-jogos {
+    width: 200px;
+    height: 260px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 30px;
+    position: absolute;
+    right: 20px;
+    bottom: 750px;
+    background-image: linear-gradient(to right bottom, rgba(122, 49, 236, 0.2), rgba(47, 7, 109, 0.83));
+    backdrop-filter: blur(25px);
+    padding: 10px 20px;
+
+}
+
+.sessao-info #box-jogos h2 {
+    font-family: TitilliumWeb-Black;
+    font-size: 16px;
+    text-transform: uppercase;
+    margin-top: 20px;
+
+
+}
+
+.sessao-info #box-jogos p {
+    font-family: Quicksand;
+    font-size: 11px;
+    margin-top: 20px;
+}
+
+.sessao-info #box-professores {
+    width: 200px;
+    height: 260px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    left: 20px;
+    bottom: 200px;
+    background-image: linear-gradient(to right bottom, rgba(122, 49, 236, 0.2), rgba(47, 7, 109, 0.83));
+    backdrop-filter: blur(25px);
+    padding: 10px 20px;
+}
+
+.sessao-info #box-professores h2 {
+    font-family: TitilliumWeb-Black;
+    font-size: 16px;
+    text-transform: uppercase;
+    margin-top: 20px;
+}
+
+.sessao-info #box-professores p {
+    font-family: Quicksand;
+    font-size: 11px;
+    margin-top: 10px;
+}
+
+
+.sessao-noticias {
+    background-image: url(../assets/images/backgrund_notícias.svg);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    width: 100vw;
+    height: 3645px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 100px;
+
+}
+
+.sessao-noticias .titulo-noticias {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 60px;
+    padding-bottom: 80px;
+}
+
+.sessao-noticias .titulo-noticias h1 {
+    text-transform: uppercase;
+    font-size: 22px;
+    font-family: TitilliumWeb-Black;
 }
 
 #linha2 {
     width: 200px;
     height: 2px;
     background-color: #F9AA01;
+    margin-top: 25px;
 }
 
-main .titulo-noticia {
+.sessao-noticias .box-noticia {
+    width: 320px;
+    height: 350px;
+    border: 1px solid white;
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(to right bottom, rgba(29, 26, 52, 0.34), rgba(5, 1, 12, 0.79));
+    backdrop-filter: blur(30px);
+}
+
+.sessao-noticias .box-noticia h2 {
+    font-family: TitilliumWeb-Bold;
+    padding-top: 10px;
+    padding-left: 25px;
+}
+
+.sessao-noticias .box-noticia p {
+    padding: 15px 25px;
+}
+
+
+/* FOOTER */
+
+footer {
+    background-image: url(../assets/images/backgroung_footer.svg);
+    width: 100%;
+    height: 1520px;
+}
+
+footer .parte1 {
+    /* border: 1px solid red; */
+    height: 300px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 30px;
+    justify-content: space-between;
+    padding-top: 30px;
 }
 
-main .noticias {
-    width: 100%;
-    height: 4300px;
-    background-image: url(../assets/images/backgrund_notícias.png);
+footer .parte1 img {
+    width: 140px;
+    height: 40px;
+
 }
 
-main .noticias h3 {
-    font-family: TitilliumWeb-Black;
-    font-size: 18px;
-    margin-top: 50px;
+footer .parte1 p {
+    font-family: Quicksand;
+    font-size: 14px;
 }
-.time {
+
+footer #redes-sociais {
     display: flex;
-    
-    background-color:#F9AA01
-    
-}
- /* Footer */
-footer {
-    padding-top: 60px;
-    padding-bottom: 30px;
-    box-shadow: inset 0 30px 60px black;
-    background-image: url(../assets/images/backgroung_footer.png);
-    background-position: top;
-    background-size: contain;
+    justify-content: space-around;
+
+
 }
 
-footer #sobre {
-    width: 100%;
-    height: 304px;
+footer .parte2 {
+    padding-top: 130px;
+}
+
+footer .parte2 h1 {
+    padding-bottom: 5px;
+    font-family: TitilliumWeb-Black;
+}
+
+footer .linhafooter {
+    width: 33%;
+    height: 3px;
+    background-color: #F9AA01;
+    margin-bottom: 50px;
+
+}
+
+footer .linhas {
+    background-color: #F9AA01;
+    height: 2px;
+    width: 10px;
+}
+
+footer .parte2 .alinhamento {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+
+}
+
+footer .alinhar-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+footer .alinhar-links2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 191px;
+    padding-top: 15px;
+    padding-bottom: 120px;
+}
+
+
+footer .contatos-info {
+    font-family: TitilliumWeb-Bold;
+
+
+}
+
+footer .contatos-info .amarelo {
+    color: #F9AA01;
+
+}
+
+footer .contatos-info .espaco {
+    padding-top: 7px;
+}
+
+footer .parte4 h1 {
+    padding-top: 100px;
+    font-family: TitilliumWeb-Black;
+}
+
+footer #box-email {
+    width: 320px;
+    height: 40px;
+    border: 1px solid #ffffff;
+    display: flex;
+    align-items: center;
+    background-image: linear-gradient(to right bottom, rgba(239, 239, 239, 0.6), rgba(239, 239, 239, 0.1));
+    backdrop-filter: blur(30px);
+}
+
+footer #box-email p {
+    padding-left: 20px;
+    font-family: Quicksand;
+}
+
+footer #box-enviar {
+    width: 320px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #F9AA01;
+    border-radius: 7px;
+}
+
+footer #box-enviar p {
+    font-family: TitilliumWeb-Bold;
+    font-size: 22px;
+    color: black;
+}
+
+footer .caixas-newsletter {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-
-}
-footer #sobre > img {width: 110px; }
-
-footer #sobre p {
-    font-family: Quicksand;
-    font-weight: 400;
-    font-size: 14px;
+    /* border: 1px solid red; */
+    height: 105px;
 }
 
-footer #midias-sociais-footer{
-    width: 100%;
+footer #box-voltar {
+    width: 40px;
+    height: 40px;
+    background-color: #F9AA01;
     display: flex;
     justify-content: center;
-    gap: 25px;
+    align-items: center;
+    position: relative;
+    left: 290px;
+    top: 130px;
+    border-radius: 8px;
 }
 
-/* Tablets >= 768px*/
-@media screen and (min-width: 768px) {}
-
-/* Desktops >= 1200px*/
-@media screen and (min-width: 1200px) {
-    .layout-grid {
-        width: 100%;
-        max-width: 1200px;
-        /* border: 3px dotted yellowgreen; */
-    }
-
-    /* HEADER  */
-    header {
-        position: static;
-        height: 140px;
-    }
-
-    /* Header Top */
-    header .header-top {
-        /* block é o valor default da maioria dos elementos */
-        display: block;
-        height: 50px;
-        border-bottom: 2px solid #F9AA01;
-    }
-
-    header .header-top .contatos {
-        width: 415px;
-        display: flex;
-        justify-content: space-between;
-
-        font-family: Inter;
-        font-size: 14px;
-        font-weight: 400;
-
-        /* border: 2px solid white; */
-    }
-
-    header .header-top .contatos > div {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: 10px;
-        /* border: 1px solid yellow; */
-    }
-
-    header .header-top .midias-sociais {
-        width: 120px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        /* border: 2px solid white; */
-    }
-
-    /* Esconde elementos desnecessários */
-    header .menu-hamburger,
-    header .menu-pontinhos,
-    header .header-bottom nav .phone,
-    header .header-bottom nav .email,
-    header .header-bottom nav .midias-sociais {
-        display: none;
-    }
-
-    /* Header Bottom */
-    header .header-bottom {
-        height: 90px;
-    }
-
-    header .header-bottom img.logo {
-        width: 200px;
-    }
-
-    header .header-bottom nav {
-        position: static;
-        width: 440px;
-        height: 50px;
-        padding: 0;
-        flex-direction: row;
-        align-items: center;
-        /* background-color: red; */
-    }
-
-    header .header-bottom nav>a {
-        border: none;
-        font-size: 14px;
-    }
-
-    header .header-bottom nav>a:hover {
-        background-color: transparent;
-        color: #F9AA01;
-    }
-
-    header .header-bottom .menu-usuarios {
-        position: static;
-        flex-direction: row;
-        justify-content: space-between;
-        width: 120px;
-        height: auto;
-        background-color: transparent;
-    }
-
-    /* MAIN */
-    main {
-        margin-top: 0;
-    }
-
-    /* Banner */
-    main .banner {
-        height: 722px;
-        /* alterar a imagem de fundo */
-        background-image: url(../assets/images/Banner_background_1.png);
-        background-size: cover;
-        background-position: top;
-
-    }
-    
-    main .banner h1 {
-        font-size: 80px;
-    }
-
-    /* Sessão de Jogos */
-    main .jogos {
-        height: 500px;
-    }
-    main .jogos .jogos-flex {
-        flex-direction: row;
-    }
-
-
-   
+footer .ultima-frase {
+    padding-top: 150px;
+    padding-left: 45px
+}
