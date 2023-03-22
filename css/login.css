@@ -1,4 +1,27 @@
-.mostrar-menu {
+/* TITILLIUM WEB */
+@font-face {
+    font-family: TitilliumWeb-Black;
+    src: url(../assets/fonts/Titillium_Web/TitilliumWeb-Black.ttf);
+}
+
+@font-face {
+    font-family: TitilliumWeb-Bold;
+    src: url(../assets/fonts/Titillium_Web/TitilliumWeb-Bold.ttf);
+}
+
+
+/* INTER */
+@font-face {
+    font-family: Inter;
+    src: url(../assets/fonts/Inter/Inter-VariableFont_slnt\,wght.ttf);
+}
+
+/* QUICKSAND */
+@font-face {
+    font-family: Quicksand;
+    src: url(../assets/fonts/Quicksand/static/Quicksand-Regular.ttf);
+}
+mostrar-menu {
     left: 0 !important;
 }
 
@@ -21,6 +44,7 @@
 }
 body {
     color: #ffffff;
+    margin: 0px;
 }
 
 
@@ -124,7 +148,7 @@ header .menu-usuarios {
 
 .login {
 display: flex;
-justify-content: center;
+justify-content: space-around;
 align-items: center;
 flex-direction: column;
 width: 100%;
@@ -154,9 +178,8 @@ color: white;
     position: relative;
     z-index: 2;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    gap: 5px;
+    gap: 15px;
     padding: 5px 10px;
     width: 80%;
     height: 40px;
@@ -187,6 +210,25 @@ font-size: 20px;
 
 .linha input::placeholder {
 color: white;
+}
+
+ h1.texto-login {
+font-family: TitilliumWeb-Black;
+font-size: 28px;
+z-index: 2;
+}
+.botao-logar {
+    width: 80%;
+    height: 40px;
+    background-color: #F9AA01;
+    z-index: 2;
+    font-family: TitilliumWeb-Bold;
+    font-size: 24px;
+}
+#linha-login {
+    width: 27%;
+    height: 3px;
+    background-color: #F9AA01;
 }
 
 /* FOOTER */
