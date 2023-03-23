@@ -48,129 +48,55 @@ body {
 }
 
 
-
-
-
-/* HEADER */
-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 20;
-    width: 100vw;
-    height: 60px;
-    background-color: #1B1426;
-}
-
-/* Header Top */
-header .header-top {
-    display: none;
-}
-
-/* Header Bottom */
-
-
-header .header-bottom {
-    height: 100%;
-}
-
-header .header-bottom img.logo {
-    width: 86px;
-    /* transform: rotate(-5deg); */
-}
-
-header .header-bottom nav {
-    position: fixed;
-    top: 60px;
-    left: -80vw;
-    width: 80vw;
-    height: calc(100vh - 60px);
-
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding-bottom: 20px;
-    background-image: linear-gradient(to right bottom, rgba(27, 20, 38, 0.7), rgba(27, 20, 38, 0.4));
-    backdrop-filter: blur(45px);
-
-    transition: left 0.8s;
-}
-
-.mostrar-menu {
-    left: 0 !important;
-}
-
-/* somente links "filhos diretos" */
-header .header-bottom nav>a {
-    padding: 30px 0;
-    color: white;
-    font-family: Inter;
-    font-weight: 400;
-    font-size: 15px;
-    text-align: center;
-    text-decoration: none;
-    border-bottom: 2px solid #F9AA01;
-}
-
-header .header-bottom nav>a {
-    /* background-color: #F9AA01; */
-}
-
-header .header-bottom nav>a:last-of-type {
-    border-bottom: none;
-}
-
-
-
-header .header-bottom nav .midias-sociais {
-    /* */
+/* formulário */
+.login {
     display: flex;
     justify-content: center;
-    gap: 50px;
-    /* gap é o espaçamento entre os elementos, funciona em linha e também em coluna. */
-}
-
-header .menu-usuarios {
-    position: fixed;
-    top: 60px;
-    right: -20vw;
-    width: 20vw;
-    height: 180px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
     align-items: center;
-    background-image: linear-gradient(to right bottom, rgba(27, 20, 38, 0.7), rgba(27, 20, 38, 0.4));
-    backdrop-filter: blur(45px);
+    flex-direction: column;
+    width: 60vh;
+    height: 100vh;
+    margin: 0 auto;
+    background-image: url(../assets/images/Banner_Login.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 
-    transition: 0.8s;
+    position: relative;
+    z-index: 0;
+
+    width: 100%;
+    
 }
 
-.login {
-display: flex;
-justify-content: space-around;
-align-items: center;
-flex-direction: column;
-width: 100%;
-height: 90vh;
-margin: 0 auto;
-background-image: url(../assets/images/Banner_Login.png);
-background-size: cover;
-background-repeat: no-repeat;
-background-position: center;
+main .box-login {
+ width: 80%;
+ height: 450px;
+ display: flex;
+ border-radius: 8px;
 
-position: relative;
-z-index: 0;
+ border: 1px solid white;
+ 
+}
+ 
+main .box-linha {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    background-image: linear-gradient(to right bottom, rgba(27, 20, 38, 0.6), rgba(60, 3, 65, 0.38));
+    width: 100%;
+
 }
 
 .login::before {
-content: "";
-width: 100%;
-height: 100%;
-position: absolute;
-z-index: 1;
-backdrop-filter: blur(4px);
-color: white;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+    background-color: transparent;
+    backdrop-filter: blur(4px);
+    color: white;
 
 }
 
@@ -178,214 +104,65 @@ color: white;
     position: relative;
     z-index: 2;
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    gap: 15px;
+    gap: 5px;
     padding: 5px 10px;
     width: 80%;
     height: 40px;
-    background-color: rgb(244, 194, 194);
     border-radius: 8px;
 
     background: 
         /* efeito aplicado ao ao box a partir do padding */
-        linear-gradient(to right, rgba(228, 228, 228,1), rgba(228, 228, 228,0.3)) padding-box,
+        linear-gradient(to right, rgba(239, 239, 239, 0.6), rgba(239, 239, 239, 0.1)) padding-box,
         /* efeito aplicado apenas na borda */
-        linear-gradient(to right, rgba(255, 255, 255,1), rgba(255, 255, 255,0)) border-box;
+        linear-gradient(to right,  rgba(239, 239, 239, 0.6), rgba(239, 239, 239, 0.1)) border-box;
 
         border-image-slice: 1;
         border: 1px solid transparent;
 }
 
 .linha input {
-width: 100%;
-height: 35px;
-border: none;
-background-color: transparent;
-outline: none;
-color: white;
-font-family: 'Courier New', Courier, monospace;
-font-size: 20px;
-
-}
-
-.linha input::placeholder {
-color: white;
-}
-
- h1.texto-login {
-font-family: TitilliumWeb-Black;
-font-size: 28px;
-z-index: 2;
-}
-.botao-logar {
-    width: 80%;
-    height: 40px;
-    background-color: #F9AA01;
-    z-index: 2;
-    font-family: TitilliumWeb-Bold;
-    font-size: 24px;
-}
-#linha-login {
-    width: 27%;
-    height: 3px;
-    background-color: #F9AA01;
-}
-
-/* FOOTER */
-
-footer {
-    background-image: url(../assets/images/backgroung_footer.svg);
     width: 100%;
-    height: 1520px;
-}
-
-footer .parte1 {
-    /* border: 1px solid red; */
-    height: 300px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    padding-top: 30px;
-}
-
-footer .parte1 img {
-    width: 140px;
-    height: 40px;
-
-}
-
-footer .parte1 p {
-    font-family: Quicksand;
+    height: 35px;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
     font-size: 14px;
 }
 
-footer #redes-sociais {
-    display: flex;
-    justify-content: space-around;
-
-
+.linha input::placeholder {
+    color: white;
 }
 
-footer .parte2 {
-    padding-top: 130px;
-}
-
-footer .parte2 h1 {
-    padding-bottom: 5px;
-    font-family: TitilliumWeb-Black;
-}
-
-footer .linhafooter {
-    width: 33%;
-    height: 3px;
-    background-color: #F9AA01;
-    margin-bottom: 50px;
-
-}
-
-footer .linhas {
-    background-color: #F9AA01;
+main .linha1 {
     height: 2px;
-    width: 10px;
+    width: 100px;
+    background-color: #F9AA01;
 }
 
-footer .parte2 .alinhamento {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 12px;
-
-}
-
-footer .alinhar-links {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-footer .alinhar-links2 {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 191px;
-    padding-top: 15px;
-    padding-bottom: 120px;
-}
-
-
-footer .contatos-info {
-    font-family: TitilliumWeb-Bold;
-
-
-}
-
-footer .contatos-info .amarelo {
-    color: #F9AA01;
-
-}
-
-footer .contatos-info .espaco {
-    padding-top: 7px;
-}
-
-footer .parte4 h1 {
-    padding-top: 100px;
-    font-family: TitilliumWeb-Black;
-}
-
-footer #box-email {
-    width: 320px;
-    height: 40px;
-    backdrop-filter: blur(30px);
-    display: flex;
-    align-items: center;
-}
-
-footer #box-email p {
-    padding-left: 20px;
-    font-family: Quicksand;
-}
-
-footer #box-enviar {
-    width: 320px;
-    height: 40px;
+main .box-logar {
+    width: 80%;
+    height: 45px;
+    background-color: #F9AA01;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #F9AA01;
-    border-radius: 7px;
 }
 
-footer #box-enviar p {
-    font-family: TitilliumWeb-Bold;
+main .box-logar button {
+    background-color: transparent;
+    border: none;
     font-size: 22px;
-    color: black;
+    font-family: TitilliumWeb-Bold;
 }
 
-footer .caixas-newsletter {
+main .login h1 {
+    font-size: 26px;
+    font-family: TitilliumWeb-Black;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     align-items: center;
-    /* border: 1px solid red; */
-    height: 105px;
-}
-
-footer #box-voltar {
-    width: 40px;
-    height: 40px;
-    background-color: #F9AA01;
-    display: flex;
     justify-content: center;
-    align-items: center;
-    position: relative;
-    left: 290px;
-    top: 130px;
-    border-radius: 8px;
-}
-
-footer .ultima-frase {
-    padding-top: 150px;
-    padding-left: 45px
 }

@@ -1,0 +1,282 @@
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* TITILLIUM WEB */
+@font-face {
+    font-family: TitilliumWeb-Black;
+    src: url(../assets/fonts/Titillium_Web/TitilliumWeb-Black.ttf);
+}
+
+@font-face {
+    font-family: TitilliumWeb-Bold;
+    src: url(../assets/fonts/Titillium_Web/TitilliumWeb-Bold.ttf);
+}
+
+
+/* INTER */
+@font-face {
+    font-family: Inter;
+    src: url(../assets/fonts/Inter/Inter-VariableFont_slnt\,wght.ttf);
+}
+
+/* QUICKSAND */
+@font-face {
+    font-family: Quicksand;
+    src: url(../assets/fonts/Quicksand/static/Quicksand-Regular.ttf);
+}
+mostrar-menu {
+    left: 0 !important;
+}
+
+.mostrar-usuario {
+    right: 20px !important;
+}
+
+.layout-grid {
+    /* border: 1px solid salmon; */
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+/* justify content + align items */
+.alinhamento-between-center {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+body {
+    color: #ffffff;
+    margin: 0px;
+}
+
+
+/* Mobile First */
+
+/* Main */
+.login {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 1200px;
+    margin: 0 auto;
+    background-image: url(../assets/images/Banner_cadastro_de_Jogadores.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    position: relative;
+    z-index: 0;
+}
+
+.login .box-preta {
+    border: 2px solid white;
+    width: 340px;
+    height: 650px;
+    z-index: 3;
+    margin-top: 50px; 
+    border-radius: 8px;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    background:
+        /* fundo */
+        linear-gradient(to right bottom,rgba(27, 20, 38, 0.6), rgba(60, 3, 65, .38)) padding-box,
+        /* fundo borda */
+        linear-gradient(90deg, rgba(255, 255, 255, .6), rgba(255, 255, 255, .1)) border-box;
+    backdrop-filter: blur(2px);
+}
+
+.login::before {
+    content: "";
+    width: 100vw;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+    background-color: transparent;
+    backdrop-filter: blur(4px);
+    color: white;
+
+}
+
+.linha {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 10px;
+    width: 84%;
+    height: 30px;
+    background-color: rgb(244, 194, 194);
+    border-radius: 8px;
+    margin-left: 20px;
+    margin-top: 30px;
+
+    border: 2px solid transparent;
+    border-radius: 8px;
+    background:
+        /* fundo */
+        linear-gradient(to right bottom, rgba(239, 239, 239, 0.6), rgba(239, 239, 239, 0.1)) padding-box,
+        /* fundo borda */
+        linear-gradient(90deg, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0)) border-box;
+    backdrop-filter: blur(4px);
+}
+.linha input {
+    width: 100%;
+    height: 35px;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    color: white;
+    font-family: TitilliumWeb-Regular;
+    font-size: 16px;
+    gap: 5px;
+}
+
+.linha input::placeholder {
+    color: white;
+    padding-left: 15px;
+}
+
+.login button {
+    position: relative;
+    z-index: 2;
+    gap: 5px;
+    padding: 5px 10px;
+    width: 80%;
+    height: 45px;
+    background-color: #F9AA01;
+    border-radius: 8px;
+    margin-left: 35px;
+    margin-top: 50px;
+    font-size: 20px;
+    font-family: TitilliumWeb-Bold;
+}
+
+.login form h1 {
+    font-family: TitilliumWeb-Black;
+    font-size: 30px;
+    color: white;
+    padding-bottom: 8px;
+    text-align: center;
+    margin-top: 40px;
+    text-transform: uppercase;
+}
+
+.login form hr {
+    border: 2px solid #F9AA01;
+    width: 80%;
+    margin-left: 30px;
+    margin-bottom: 70px;
+}
+
+.imagem-equipe {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-top: 30px;
+}
+
+.imagem-equipe p {
+    font-size: 11px;
+    margin-right: 25px;
+    display: flex;
+    align-items: center;
+    font-family: TitilliumWeb-Regular;
+
+}
+
+
+main .tabela-loud table {
+    width: 350px;
+    position: relative;
+    z-index: 2;
+}
+
+/* tbody */
+main .tabela-loud thead,
+main .tabela-loud tbody {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+}
+
+/* linha do cabeçalho da tabela */
+main .tabela-loud thead tr {
+    margin-bottom: 30px;
+    border-bottom: 3px solid #F9AA01;
+}
+
+/* linha do cabeçalho */
+main .tabela-loud table thead th {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    height: 50px;
+    color: #F9AA01;
+    font-family: TitilliumWeb-Black;
+    font-size: 20px;
+
+}
+
+/* linhas da tabela, independentemente do cabeçalho ou corpo */
+ main .tabela-loud table tr {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+} 
+
+main .tabela-loud table tbody tr {
+    height: 70px;
+    margin-bottom: 20px;     
+    /* efeito da borda e do fundo glass */
+    border: 2px solid transparent;
+    border-radius: 8px;
+    background:
+        /* fundo */
+        linear-gradient(to right bottom, rgba(27, 20, 38, 0.6), rgba(60, 3, 65, .38)) padding-box,
+        /* fundo borda */
+        linear-gradient(90deg, rgba(255, 255, 255, .6), rgba(255, 255, 255, .1)) border-box;
+    backdrop-filter: blur(4px);
+
+
+}
+
+main .tabela-loud table td {
+    width: 100%;
+    height: 38px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 2px solid #F9AA01;
+    padding: 10px 10px;
+    font-family: TitilliumWeb-Bold;
+}
+
+main .tabela-loud table td:last-of-type {
+    border: none;
+}
+
+main .tabela-loud table td img.green-play {
+    width: 25px;
+}
+
+main .tabela-loud table td img.yellow-trash {
+    width: 15px;
+}
+
+/* Desktop */
+@media screen and (min-width: 992px) {
+    .container-grid {
+        width: 100%;
+        max-width: 992px;
+        margin: 0 auto;
+        /* border: 1px solid #EC4358; */
+    }
+}
